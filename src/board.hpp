@@ -2,10 +2,10 @@
 #include<array>
 #include "player.hpp"
 struct gameBoard{
-    std::array<char,9>boardArray;
+    std::array<int,9>boardArray;
     void boardInit();
-    void drawGameBoard();
-    void boardPlayMove(int move, Player joueur);
+    void drawGameBoard(Player joueur1,Player Joueur2);
+    void boardPlayMove(int a,int b);
     bool isCellEmpty(int a);
-    char getCellContent(int a);
+    int getCellContent(int a);
 };

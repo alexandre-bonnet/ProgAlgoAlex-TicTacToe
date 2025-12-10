@@ -4,14 +4,19 @@
 #include "player.hpp"
 
 void gameBoard::boardInit(){
-    boardArray = {' ',' ',' ',' ',' ',' ',' ',' ',' '};
+    boardArray = {0,0,0,0,0,0,0,0,0};
 }
 
-void gameBoard::drawGameBoard(){
+void gameBoard::drawGameBoard(Player joueur1,Player joueur2){
     std::cout<<"  ==========="<<std::endl;
     for(int j{0};j<3;j++){
         for(int i{0};i<3;i++){
-            std::cout<<" | "<<boardArray[i+3*j];
+            if(boardArray[i+3*j]==joueur1.getNumber())
+            std::cout<<" | "<<joueur1.getSymbol();
+            else if(boardArray[i+3*j]==joueur2.getNumber())
+            std::cout<<" | "<<joueur2.getSymbol();
+            else 
+            std::cout<<" |  ";
         }
         std::cout<<" |"<<std::endl;
     }
@@ -19,15 +24,15 @@ void gameBoard::drawGameBoard(){
     return;
 }
 
-void gameBoard::boardPlayMove(int a,Player joueur){
-    boardArray[a-1] = joueur.getSymbol();
+void gameBoard::boardPlayMove(int a,int b){
+    boardArray[a-1] = b;
     return;
 }
 
 bool gameBoard::isCellEmpty(int a){
-    return boardArray[a-1]==char(32);
+    return boardArray[a-1]==0;
 }
 
-char gameBoard::getCellContent(int a){
+int gameBoard::getCellContent(int a){
     return boardArray[a-1];
 }

@@ -13,3 +13,16 @@ std::string Player::getName(){
 char Player::getSymbol(){
     return symbol;
 }
+
+void Player::aiInit(char pSymbol){
+    name = "AI";
+    symbol = pSymbol;
+}
+
+void Player::setNumber(int a){
+    number = a;
+}
+
+int Player::getNumber(){
+    return number;
+}

@@ -1,16 +1,20 @@
 #include <iostream>
 #include <array>
+#include <time.h>
+#include <cmath>
 #include "game.hpp"
 #include "player.hpp"
 #include "board.hpp"
 
-void BattleDeuxJoueurs(Player premierJoueur, Player secondJoueur);
-void gameModePlayersInit(gameBoard& board);
-void activeGame(Player premierJoueur, Player secondJoueur, gameBoard& board);
-void gameModeAiInit(gameBoard& board);
-void playMove(Player joueur, gameBoard& board);
+void battleMultiplayer(Player premierJoueur, Player secondJoueur);
+void gameModeMultiplayerInit(gameBoard& board);
+void activeMultiplayerGame(Player premierJoueur, Player secondJoueur, gameBoard& board);
+void gameModeSoloInit(gameBoard& board);
+void playMove(Player joueur, gameBoard& board, int number);
 bool checkwin(gameBoard& board, Player Joueur);
-void printEndMessage();
+void aiMove(Player ai, gameBoard& board);
+void activeSoloGame(Player joueur, Player ai, gameBoard board);
+void printEndGoodMessage();
 
 int gameInit(){
     gameBoard board;
@@ -28,14 +32,14 @@ int gameInit(){
         std::cin >> a;
     }
     if(a==1){
-        gameModePlayersInit(board);
+        gameModeMultiplayerInit(board);
     } else {
-        gameModeAiInit(board);
+        gameModeSoloInit(board);
     }
     return a;
 }
 
-void gameModePlayersInit(gameBoard& board){
+void gameModeMultiplayerInit(gameBoard& board){
     std::cout<<"Mode Deux Joueurs actif\n";
     Player Joueur1;
     std::cout << "Joueur 1 ";
@@ -49,33 +53,69 @@ void gameModePlayersInit(gameBoard& board){
     }
     std::cout << "Joueur 1 : " << Joueur1.getName() << " -> " << Joueur1.getSymbol() << std::endl;
     std::cout << "Joueur 2 : " << Joueur2.getName() << " -> " << Joueur2.getSymbol() << std::endl;
+    srand ( time(NULL) );
     if (rand() % 2 == 0)
-        activeGame(Joueur1, Joueur2, board);
+        activeMultiplayerGame(Joueur1, Joueur2, board);
     else
-        activeGame(Joueur2, Joueur1, board);
+        activeMultiplayerGame(Joueur2, Joueur1, board);
 }
 
-void activeGame(Player premierJoueur, Player secondJoueur, gameBoard& board){
-    board.drawGameBoard();
+void gameModeSoloInit(gameBoard& board){
+    std::cout<<"Mode IA actif\n";
+    Player joueur;
+    joueur.playerInit();
+    Player ai;
+    if (joueur.getSymbol()=='O')
+        ai.aiInit('X');
+    else
+        ai.aiInit('O');
+    activeSoloGame(joueur, ai, board);
+}
+
+void activeMultiplayerGame(Player premierJoueur, Player secondJoueur, gameBoard& board){
+    premierJoueur.setNumber(1);
+    secondJoueur.setNumber(2);
+    board.drawGameBoard(premierJoueur,secondJoueur);
     for(int i = 0; i<4;i++){
-        playMove(premierJoueur, board);
+        playMove(premierJoueur, board,premierJoueur.getNumber());
+        board.drawGameBoard(premierJoueur,secondJoueur);
         if(checkwin(board,premierJoueur)){
-            printEndMessage();
+            printEndGoodMessage();
             break;
         }
         if(i>9){
             std::cout << "c'est une egalite";
             break;
         }
-        playMove(secondJoueur, board);
-        if(checkwin(board,premierJoueur)){
-            printEndMessage();
+        playMove(secondJoueur, board,secondJoueur.getNumber());
+        board.drawGameBoard(premierJoueur,secondJoueur);
+        if(checkwin(board,secondJoueur)){
+            printEndGoodMessage();
             break;
         }
     } return;
 }
 
-void playMove(Player joueur, gameBoard& board){
+void activeSoloGame(Player joueur, Player ai, gameBoard board){
+    joueur.setNumber(1);
+    for(int i = 0; i<4;i++){
+        playMove(joueur, board,joueur.getNumber());
+        if(checkwin(board,joueur)){
+            printEndGoodMessage();
+            break;
+        }
+        if(i>9){
+            std::cout << "c'est une egalite";
+            break;
+        }
+        aiMove(ai, board);
+        if(checkwin(board,ai)){
+            std::cout << "AI gagne";
+            break;
+        } board.drawGameBoard(joueur,ai);
+    } return;
+}
+void playMove(Player joueur, gameBoard& board, int number){
     int a{};
     std::cout << joueur.getName() << " c'est votre tour : ";
     std::cin >> a;
@@ -91,42 +131,42 @@ void playMove(Player joueur, gameBoard& board){
         }
         std::cin >> a;
     }
-    board.boardPlayMove(a,joueur);
-    board.drawGameBoard();
+    board.boardPlayMove(a,number);
 }
 
-void gameModeAiInit(gameBoard& board){
-    std::cout<<"Mode IA actif\n";
-    Player Joueur;
-    Joueur.playerInit();
-    if (Joueur.getSymbol()=='O')
-        Player AI{"AI",'X'};
-    else
-        Player AI{"AI",'O'};
-    board.boardPlayMove(1,Joueur);
+void aiMove(Player ai, gameBoard& board){
+    int a = rand();
+    while(!board.isCellEmpty(a%9+1)){
+        srand ( time(NULL) );
+        a = rand();
+    }
+    ai.getName();
+    board.boardPlayMove(a,3);
+    return;
 }
 
 bool checkwin(gameBoard& board, Player Joueur){
+    int joueurPow3 = pow(Joueur.getNumber(),3);
     for(int i{1};i<10;i+=3){
-        if(board.getCellContent(i)==board.getCellContent(i+1)&&board.getCellContent(i)==board.getCellContent(i+2)&&!board.isCellEmpty(i)){
+        if(board.getCellContent(i)*board.getCellContent(i+1)*board.getCellContent(i+2)==joueurPow3){
             std::cout << Joueur.getName() << " gagne ! "<<std::endl;
             return true;
         }
-        if(board.getCellContent(i)==board.getCellContent(i+3)&&board.getCellContent(i)==board.getCellContent(i+6)&&!board.isCellEmpty(i)){
+        if(board.getCellContent(i)*board.getCellContent(i+3)*board.getCellContent(i+6)==joueurPow3){
             std::cout << Joueur.getName() << " gagne ! "<<std::endl;
             return true;
         }
-    } if(board.getCellContent(1)==board.getCellContent(5)&&board.getCellContent(1)==board.getCellContent(9)&&!board.isCellEmpty(5)){
+    } if(board.getCellContent(1)*board.getCellContent(5)*board.getCellContent(9)==joueurPow3){
         std::cout << Joueur.getName() << " gagne !"<<std::endl;
             return true;
-    } if(board.getCellContent(3)==board.getCellContent(5)&&board.getCellContent(1)==board.getCellContent(7)&&!board.isCellEmpty(5)){
+    } if(board.getCellContent(3)*board.getCellContent(5)*board.getCellContent(7)==joueurPow3){
         std::cout << Joueur.getName() << " gagne !"<<std::endl;
             return true;
     }
     return false;
 }
 
-void printEndMessage(){
+void printEndGoodMessage(){
     std::cout<<" ____                         _ \n| __ ) _ __ __ ___   _____   | |\n|  _ \\| '__/ _` \\ \\ / / _ \\  | |\n| |_) | | | (_| |\\ V / (_) | |_|\n|____/|_|  \\__,_| \\_/ \\___/  (_)\n";
     return;
 }

@@ -3,9 +3,9 @@
 #include "board.hpp"
 
 int gameInit();
-void BattleDeuxJoueurs(Player premierJoueur, Player secondJoueur);
-void gameModePlayersInit(gameBoard& board);
-void gameModeAiInit(gameBoard& board);
+void battleMultiplayer(Player premierJoueur, Player secondJoueur);
+void gameModeMultiplayerInit(gameBoard& board);
+void gameModeSoloInit(gameBoard& board);
 void activeGame(Player premierJoueur, Player secondJoueur, gameBoard& board);
 void playMove(Player joueur, gameBoard& board);
 bool checkwin(gameBoard& board, Player Joueur);
