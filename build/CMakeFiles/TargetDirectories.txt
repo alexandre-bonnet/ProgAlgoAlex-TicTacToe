@@ -1,3 +1,0 @@
-E:/Esiee/IMAC1/Prog_Algo/TicTacToe/build/CMakeFiles/main.dir
-E:/Esiee/IMAC1/Prog_Algo/TicTacToe/build/CMakeFiles/edit_cache.dir
-E:/Esiee/IMAC1/Prog_Algo/TicTacToe/build/CMakeFiles/rebuild_cache.dir
