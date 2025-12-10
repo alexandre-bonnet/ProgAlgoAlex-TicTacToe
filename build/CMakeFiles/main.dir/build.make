@@ -86,36 +86,70 @@ CMakeFiles/main.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
 	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\main.cpp -o CMakeFiles\main.dir\src\main.cpp.s
 
-CMakeFiles/main.dir/src/Player.cpp.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/Player.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
-CMakeFiles/main.dir/src/Player.cpp.obj: E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/Player.cpp
-CMakeFiles/main.dir/src/Player.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\Esiee\IMAC1\Prog_Algo\TicTacToe\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/Player.cpp.obj"
-	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/Player.cpp.obj -MF CMakeFiles\main.dir\src\Player.cpp.obj.d -o CMakeFiles\main.dir\src\Player.cpp.obj -c E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\Player.cpp
+CMakeFiles/main.dir/src/board.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/board.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/src/board.cpp.obj: E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/board.cpp
+CMakeFiles/main.dir/src/board.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\Esiee\IMAC1\Prog_Algo\TicTacToe\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/board.cpp.obj"
+	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/board.cpp.obj -MF CMakeFiles\main.dir\src\board.cpp.obj.d -o CMakeFiles\main.dir\src\board.cpp.obj -c E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\board.cpp
 
-CMakeFiles/main.dir/src/Player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Player.cpp.i"
-	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\Player.cpp > CMakeFiles\main.dir\src\Player.cpp.i
+CMakeFiles/main.dir/src/board.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/board.cpp.i"
+	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\board.cpp > CMakeFiles\main.dir\src\board.cpp.i
 
-CMakeFiles/main.dir/src/Player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Player.cpp.s"
-	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\Player.cpp -o CMakeFiles\main.dir\src\Player.cpp.s
+CMakeFiles/main.dir/src/board.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/board.cpp.s"
+	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\board.cpp -o CMakeFiles\main.dir\src\board.cpp.s
+
+CMakeFiles/main.dir/src/game.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/game.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/src/game.cpp.obj: E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/game.cpp
+CMakeFiles/main.dir/src/game.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\Esiee\IMAC1\Prog_Algo\TicTacToe\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/game.cpp.obj"
+	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/game.cpp.obj -MF CMakeFiles\main.dir\src\game.cpp.obj.d -o CMakeFiles\main.dir\src\game.cpp.obj -c E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\game.cpp
+
+CMakeFiles/main.dir/src/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/game.cpp.i"
+	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\game.cpp > CMakeFiles\main.dir\src\game.cpp.i
+
+CMakeFiles/main.dir/src/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/game.cpp.s"
+	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\game.cpp -o CMakeFiles\main.dir\src\game.cpp.s
+
+CMakeFiles/main.dir/src/player.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/player.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/src/player.cpp.obj: E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/player.cpp
+CMakeFiles/main.dir/src/player.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\Esiee\IMAC1\Prog_Algo\TicTacToe\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/player.cpp.obj"
+	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/player.cpp.obj -MF CMakeFiles\main.dir\src\player.cpp.obj.d -o CMakeFiles\main.dir\src\player.cpp.obj -c E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\player.cpp
+
+CMakeFiles/main.dir/src/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/player.cpp.i"
+	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\player.cpp > CMakeFiles\main.dir\src\player.cpp.i
+
+CMakeFiles/main.dir/src/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/player.cpp.s"
+	E:\Esiee\IMAC1\Prog_Algo\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\player.cpp -o CMakeFiles\main.dir\src\player.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/src/main.cpp.obj" \
-"CMakeFiles/main.dir/src/Player.cpp.obj"
+"CMakeFiles/main.dir/src/board.cpp.obj" \
+"CMakeFiles/main.dir/src/game.cpp.obj" \
+"CMakeFiles/main.dir/src/player.cpp.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 E:/Esiee/IMAC1/Prog_Algo/TicTacToe/bin/Debug/main.exe: CMakeFiles/main.dir/src/main.cpp.obj
-E:/Esiee/IMAC1/Prog_Algo/TicTacToe/bin/Debug/main.exe: CMakeFiles/main.dir/src/Player.cpp.obj
+E:/Esiee/IMAC1/Prog_Algo/TicTacToe/bin/Debug/main.exe: CMakeFiles/main.dir/src/board.cpp.obj
+E:/Esiee/IMAC1/Prog_Algo/TicTacToe/bin/Debug/main.exe: CMakeFiles/main.dir/src/game.cpp.obj
+E:/Esiee/IMAC1/Prog_Algo/TicTacToe/bin/Debug/main.exe: CMakeFiles/main.dir/src/player.cpp.obj
 E:/Esiee/IMAC1/Prog_Algo/TicTacToe/bin/Debug/main.exe: CMakeFiles/main.dir/build.make
 E:/Esiee/IMAC1/Prog_Algo/TicTacToe/bin/Debug/main.exe: CMakeFiles/main.dir/linkLibs.rsp
 E:/Esiee/IMAC1/Prog_Algo/TicTacToe/bin/Debug/main.exe: CMakeFiles/main.dir/objects1.rsp
 E:/Esiee/IMAC1/Prog_Algo/TicTacToe/bin/Debug/main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\Esiee\IMAC1\Prog_Algo\TicTacToe\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable E:\Esiee\IMAC1\Prog_Algo\TicTacToe\bin\Debug\main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\Esiee\IMAC1\Prog_Algo\TicTacToe\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable E:\Esiee\IMAC1\Prog_Algo\TicTacToe\bin\Debug\main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

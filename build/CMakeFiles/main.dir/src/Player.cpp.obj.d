@@ -1,5 +1,5 @@
-CMakeFiles/main.dir/src/Player.cpp.obj: \
- E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\Player.cpp \
+CMakeFiles/main.dir/src/player.cpp.obj: \
+ E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\player.cpp \
  E:/Esiee/IMAC1/Prog_Algo/mingw64/include/c++/14.2.0/iostream \
  E:/Esiee/IMAC1/Prog_Algo/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  E:/Esiee/IMAC1/Prog_Algo/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -144,4 +144,4 @@ CMakeFiles/main.dir/src/Player.cpp.obj: \
  E:/Esiee/IMAC1/Prog_Algo/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  E:/Esiee/IMAC1/Prog_Algo/mingw64/include/c++/14.2.0/istream \
  E:/Esiee/IMAC1/Prog_Algo/mingw64/include/c++/14.2.0/bits/istream.tcc \
- E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\Player.hpp
+ E:\Esiee\IMAC1\Prog_Algo\TicTacToe\src\player.hpp

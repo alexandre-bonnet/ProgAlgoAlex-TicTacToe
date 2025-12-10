@@ -5,8 +5,10 @@
 			"expression" : "E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/*.cpp",
 			"paths" : 
 			[
-				"E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/Player.cpp",
-				"E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/main.cpp"
+				"E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/board.cpp",
+				"E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/game.cpp",
+				"E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/main.cpp",
+				"E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/player.cpp"
 			],
 			"recurse" : true
 		},

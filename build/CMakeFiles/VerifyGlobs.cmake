@@ -5,8 +5,10 @@ cmake_policy(SET CMP0009 NEW)
 # SRC_FILES at CMakeLists.txt:8 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/*.cpp")
 set(OLD_GLOB
-  "E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/Player.cpp"
+  "E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/board.cpp"
+  "E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/game.cpp"
   "E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/main.cpp"
+  "E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/player.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

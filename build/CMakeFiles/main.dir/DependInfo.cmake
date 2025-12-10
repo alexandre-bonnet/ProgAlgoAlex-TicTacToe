@@ -8,8 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/Player.cpp" "CMakeFiles/main.dir/src/Player.cpp.obj" "gcc" "CMakeFiles/main.dir/src/Player.cpp.obj.d"
+  "E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/board.cpp" "CMakeFiles/main.dir/src/board.cpp.obj" "gcc" "CMakeFiles/main.dir/src/board.cpp.obj.d"
+  "E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/game.cpp" "CMakeFiles/main.dir/src/game.cpp.obj" "gcc" "CMakeFiles/main.dir/src/game.cpp.obj.d"
   "E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.obj" "gcc" "CMakeFiles/main.dir/src/main.cpp.obj.d"
+  "E:/Esiee/IMAC1/Prog_Algo/TicTacToe/src/player.cpp" "CMakeFiles/main.dir/src/player.cpp.obj" "gcc" "CMakeFiles/main.dir/src/player.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

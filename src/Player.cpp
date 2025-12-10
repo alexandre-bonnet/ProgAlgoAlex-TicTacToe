@@ -1,10 +1,10 @@
 #include <iostream>
-#include "Player.hpp"
+#include "player.hpp"
 
 void Player::playerInit(){
     std::cout << "entrez votre nom : ";
     std::cin >> name;
-    std::cout << std::endl <<  "Choissisez un symbole : ";
+    std::cout <<  "Choissisez un symbole : ";
     std::cin >> symbol;
 }
 std::string Player::getName(){
