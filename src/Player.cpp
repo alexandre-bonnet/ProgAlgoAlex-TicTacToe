@@ -17,6 +17,7 @@ char Player::getSymbol(){
 void Player::aiInit(char pSymbol){
     name = "AI";
     symbol = pSymbol;
+    number = 3;
 }
 
 void Player::setNumber(int a){
