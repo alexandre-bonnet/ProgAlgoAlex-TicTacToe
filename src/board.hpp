@@ -8,4 +8,6 @@ struct gameBoard{
     void boardPlayMove(int a,int b);
     bool isCellEmpty(int a);
     int getCellContent(int a);
+    int getEmptyCell(int a,int b,int c);
+    bool checkwin(Player Joueur);
 };

@@ -7,12 +7,6 @@ void Player::playerInit(){
     std::cout <<  "Choissisez un symbole : ";
     std::cin >> symbol;
 }
-std::string Player::getName(){
-    return name;
-}
-char Player::getSymbol(){
-    return symbol;
-}
 
 void Player::aiInit(char pSymbol){
     name = "AI";
@@ -22,8 +16,4 @@ void Player::aiInit(char pSymbol){
 
 void Player::setNumber(int a){
     number = a;
-}
-
-int Player::getNumber(){
-    return number;
 }
